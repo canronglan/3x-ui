@@ -8,6 +8,8 @@ services:
         environment:
             - ID=4
             - HOST=alisgp
+            - VKEY=mrhb35juihx1m79p
+            - NPS_SERVER=sgnat1.biaotee.top
             - XRAY_VMESS_AEAD_FORCED=false
         hostname: alisgp
         container_name: 3x-ui-alan
