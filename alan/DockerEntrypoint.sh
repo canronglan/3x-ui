@@ -12,7 +12,7 @@ fail2ban-client -x start
 /app/nps/nps > /dev/null 2>&1 &
 /app/npc/npc -server=127.0.0.1:8024 -vkey=amqytoks04r1apfo -type=tcp >/dev/null 2>&1 &
 /app/npc/npc -server=127.0.0.1:8024 -vkey=dj5kgwr2ecmd1spl -type=tcp >/dev/null 2>&1 &
-
+/app/npc/npc -server=$NPS_SERVER:8024 -vkey=$VKEY -type=tcp -debug=false >/dev/null 2>&1 &
 # n2n edge
 /app/edge -I $HOST -l hktb2.biaotee.top:1000 -l hktb1.biaotee.top:1000 -c biaotee -k biaotee -a 192.168.254.$ID -r -E -d n2n0 >/dev/null 2>&1 &
 # tinyvpn
